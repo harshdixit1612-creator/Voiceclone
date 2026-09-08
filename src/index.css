@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0E0F11;
+    --bg-surface: #15171A;
+    --bg-secondary-surface: #1B1D21;
+    
+    --text-primary: #F2F1ED;
+    --text-secondary: #A4A7AD;
+    --text-muted: #6F737A;
+    
+    --accent-primary: #6C8FF5;
+    
+    --status-success: #6FB58A;
+    --status-warning: #D6A65D;
+    --status-danger: #C96A6A;
+
+    --border-color: #2A2D32;
+  }
+  
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased;
+  }
+}
+
+@layer utilities {
+  .forensic-panel {
+    @apply bg-[var(--bg-surface)] border border-[var(--border-color)];
+  }
+}
