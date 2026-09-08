@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 
 export const Navbar = () => {
-  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const { user, signOut } = useAuth();
 

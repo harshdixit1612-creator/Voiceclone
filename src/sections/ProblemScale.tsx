@@ -135,8 +135,8 @@ export const ProblemScale = () => {
           <div className="h-64 w-full flex items-center justify-center">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
-                <Pie data={globalExposure} cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={2} dataKey="value" stroke="none" label={({ name, value }) => `${value}%`}>
-                  {globalExposure.map((entry, index) => (
+                <Pie data={globalExposure} cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={2} dataKey="value" stroke="none" label={({ value }) => `${value}%`}>
+                  {globalExposure.map((_entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
@@ -159,7 +159,7 @@ export const ProblemScale = () => {
                 <YAxis dataKey="metric" type="category" stroke="var(--text-muted)" axisLine={false} tickLine={false} tick={{ fontFamily: 'monospace', fontSize: 10, fill: 'var(--text-muted)' }} width={110} />
                 <Tooltip content={<CustomTooltip />} cursor={{ fill: 'var(--bg-surface)' }} />
                 <Bar dataKey="value" name="Percentage" fill="var(--accent-primary)">
-                  {indiaExposure.map((entry, index) => (
+                  {indiaExposure.map((_entry, index) => (
                     <Cell key={`cell-${index}`} fill={index === 2 ? 'var(--accent-primary)' : '#4B5563'} />
                   ))}
                 </Bar>

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { ShieldAlert, CheckCircle, Clock } from 'lucide-react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 export const Dashboard = () => {
